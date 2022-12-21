@@ -69,3 +69,7 @@ Running the application is done by executing
 ```
 python main.py
 ```
+
+## ✔️ TODOs
+* Handle negative numbers
+* (Handle factorial)
