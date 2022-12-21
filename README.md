@@ -1,4 +1,4 @@
-# The 24 Game
+# 🎲 The 24 Game 
 
 This is a game that tests one's mental arithmetic. The player is provided with four digits and is prompted to input an
 arithmetic expression equal to 24. This project was written using python 3.10.
@@ -12,7 +12,7 @@ The game should be played while adhering to the following rules:
 
 ## Architecture Description
 
-### Game Generation
+### Game Generation 
 
 The script `game_generation.py` contains functionalities to create the game state. It is in charge of instantiating four
 of the random
@@ -62,7 +62,7 @@ Afterwards, running all the tests is done using
 python -m pytest
 ```
 
-## Running
+## ✨ Running
 
 Running the application is done by executing
 
