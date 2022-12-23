@@ -52,24 +52,24 @@ def test_are_tokens_valid_lots_of_brackets():
 
 
 def test_shunting_yard_algorithm():
-    expression_string = "(7 - ( 8 / 8 ) ) * 4"
+    tokens = ['(', '7', '-', '(', '8', '/', '8', ')', ')', '*', '4']
     digit_list = [8, 4, 7, 8]
-    assert input_evaluation.shunting_yard_algorithm(expression_string, digit_list) == ['7', '8', '8', '/', '-', '4',
-                                                                                       '*']
+    assert input_evaluation.shunting_yard_algorithm(tokens, digit_list) == ['7', '8', '8', '/', '-', '4',
+                                                                            '*']
 
 
 def test_shunting_yard_algorithm_mismatching_parenthesis():
-    expression_string = "(7 - ( 8 / 8 ) * 4"
+    tokens = ['(', '7', '-', '(', '8', '/', '8', ')', '*', '4']
     digit_list = [8, 4, 7, 8]
     with pytest.raises(input_evaluation.MismatchingParenthesisException):
-        input_evaluation.shunting_yard_algorithm(expression_string, digit_list)
+        input_evaluation.shunting_yard_algorithm(tokens, digit_list)
 
 
 def test_shunting_yard_algorithm_no_parenthesis():
-    expression_string = "7 - 8 / 8 * 4"
+    tokens = ['7', '-', '8', '/', '8', '*', '4']
     digit_list = [8, 4, 7, 8]
-    assert input_evaluation.shunting_yard_algorithm(expression_string, digit_list) == ['7', '8', '8', '/', '4', '*',
-                                                                                       '-']
+    assert input_evaluation.shunting_yard_algorithm(tokens, digit_list) == ['7', '8', '8', '/', '4', '*',
+                                                                            '-']
 
 
 def test_evaluate_reverse_polish_notation_four_digits():
