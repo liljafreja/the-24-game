@@ -72,8 +72,7 @@ def evaluate_reverse_polish_notation(reverse_polish_tokens: list[str]) -> Number
         if token.isdigit():
             stack.append(int(token))
         else:
-            second = stack.pop()
-            first = stack.pop()
+            second, first = stack.pop(), stack.pop()
             match token:
                 case '*':
                     stack.append(first * second)
